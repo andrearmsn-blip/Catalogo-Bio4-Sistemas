@@ -34,11 +34,12 @@ export const PRODUCTOS: Producto[] = [
     nombre: "Kenko Café sobres",
     categoria: "Café",
     imagen: "/productos/kenko-sobres-bolso.jpg",
-    paraQuien: "Para quienes quieren llevar su café favorito a todas partes y disfrutarlo fácilmente en cualquier momento del día.",
-    beneficio: "Haz una pausa, recarga tu energía y disfruta de reuniones más productivas con una taza de Kenko dondequiera que estés.",
-    caracteristicas: ["Con Ganoderma lucidum", "25 sobres individuales", "Fácil preparación en casa, la oficina o de viaje"],
+    paraQuien: "Para quienes quieren llevar su café favorito a todas partes.",
+    beneficio: "Tus reuniones más productivas en casa, oficina o de viaje.",
+    caracteristicas: ["Con Ganoderma lucidum", "25 sobres individuales", "La mejor opción por comodidad"],
     precio: "$680",
     precioAntes: "$757",
+    bono: "Envío gratis.",
   },
 ];
 
