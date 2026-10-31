@@ -29,6 +29,17 @@ export const PRODUCTOS: Producto[] = [
     bono: "Envío gratis.",
     destacado: true,
   },
+  {
+    slug: "cafe-kenko-sobres",
+    nombre: "Kenko Café sobres",
+    categoria: "Café",
+    imagen: "/productos/kenko-sobres-bolso.jpg",
+    paraQuien: "Para quienes quieren llevar su café favorito a todas partes y disfrutarlo fácilmente en cualquier momento del día.",
+    beneficio: "Haz una pausa, recarga tu energía y disfruta de reuniones más productivas con una taza de Kenko dondequiera que estés.",
+    caracteristicas: ["Con Ganoderma lucidum", "25 sobres individuales", "Fácil preparación en casa, la oficina o de viaje"],
+    precio: "$680",
+    precioAntes: "$757",
+  },
 ];
 
 /** Productos de una categoría, con el destacado primero. */
