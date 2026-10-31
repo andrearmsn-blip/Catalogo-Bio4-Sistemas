@@ -159,7 +159,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(120deg, var(--marca), color-mix(in srgb, var(--marca) 70%, var(--marca-2)));
+  background: linear-gradient(120deg, var(--marca), color-mix(in srgb, var(--marca) 85%, var(--marca-2)));
   color: #fff;
   font-weight: 650;
   border-radius: 999px;

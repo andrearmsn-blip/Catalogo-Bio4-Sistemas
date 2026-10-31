@@ -6,8 +6,8 @@ export const CONFIG: Config = {
     negocio: "Bio4: tu vida en plenitud",
     descripcion: "Café funcional para quienes buscan sabor gourmet y energía sostenida en su día.",
     logo: "/logo.png",
-    primario: "#9d174d",
-    secundario: "#d9a441",
+    primario: "#143454", // azul marino del logo
+    secundario: "#e8531c", // naranja del logo
     fondo: "claro",
     whatsappPrincipal: "525543681089",
     ciudad: "Guadalajara, MX",
