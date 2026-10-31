@@ -17,14 +17,16 @@ import type { Producto } from "./tipos";
 export const PRODUCTOS: Producto[] = [
   {
     slug: "cafe-kenko-hogar",
-    nombre: "Café Kenko hogar",
+    nombre: "Kenko Café hogar",
     categoria: "Café",
     imagen: "/productos/kenko-hogar-hombre.jpg",
     paraQuien: "Para quien disfruta tomarlo en casa, aprovechando sus beneficios en cualquier momento del día.",
-    beneficio: "Una taza de bienestar que te ayuda a sentirte con menos estrés, más energía y enfoque.",
-    caracteristicas: ["Café gourmet", "60 tazas", "Con carga extra de antioxidantes"],
-    precio: "$738",
+    beneficio: "Una taza gourmet para tu rutina diaria, más enfoque y menos estrés.",
+    caracteristicas: ["Con Ganoderma lucidum", "210 g", "Para 60 tazas"],
+    precio: "$830",
     precioAntes: "$922",
+    facilidades: "Sale a $14 la taza",
+    bono: "Envío gratis.",
     destacado: true,
   },
 ];
