@@ -41,6 +41,18 @@ export const PRODUCTOS: Producto[] = [
     precioAntes: "$757",
     bono: "Envío gratis.",
   },
+  {
+    slug: "cafe-kenko-frasco",
+    nombre: "Kenko Café frasco",
+    categoria: "Café",
+    imagen: "/productos/kenko-frasco-estudio.jpg",
+    paraQuien: "Para quien busca hacer un regalo especial, elegante y diferente.",
+    beneficio: "Regala momentos para disfrutar, que aportan bienestar. Un detalle que se agradece todos los días.",
+    caracteristicas: ["Con Ganoderma lucidum", "135 g", "38 tazas"],
+    precio: "$770",
+    precioAntes: "$857",
+    bono: "Envío gratis.",
+  },
 ];
 
 /** Productos de una categoría, con el destacado primero. */
