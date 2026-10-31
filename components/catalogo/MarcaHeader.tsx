@@ -13,7 +13,7 @@ export function MarcaHeader() {
 
       {marca.logo ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={marca.logo} alt={marca.negocio} className="h-16 w-auto object-contain" />
+        <img src={marca.logo} alt={marca.negocio} className="h-28 w-auto object-contain sm:h-32" />
       ) : (
         <h1 className="font-display text-5xl font-semibold text-gradient-marca sm:text-6xl">
           {marca.negocio}
