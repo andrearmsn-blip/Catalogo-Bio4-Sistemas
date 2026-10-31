@@ -36,7 +36,7 @@ export const PRODUCTOS: Producto[] = [
     imagen: "/productos/kenko-sobres-bolso.jpg",
     paraQuien: "Para quienes quieren llevar su café favorito a todas partes.",
     beneficio: "Tus reuniones más productivas en casa, oficina o de viaje.",
-    caracteristicas: ["Con Ganoderma lucidum", "25 sobres individuales", "La mejor opción por comodidad"],
+    caracteristicas: ["Con Ganoderma lucidum", "25 sobres individuales", "La mejor opción para tu comodidad"],
     precio: "$680",
     precioAntes: "$757",
     bono: "Envío gratis.",
