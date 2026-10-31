@@ -60,7 +60,7 @@ export const PRODUCTOS: Producto[] = [
     imagen: "/productos/kenko-olla-estudio.jpg",
     paraQuien: "Para quien disfruta los sabores tradicionales de México y busca una bebida que evoque la calidez del hogar.",
     beneficio: "Déjate envolver por el aroma y el sabor clásico del café y la canela.",
-    caracteristicas: ["Café, canela y azúcar mascabado", "Ganoderma lucidum", "Para 20 tazas"],
+    caracteristicas: ["Café, canela y azúcar mascabado", "Con Ganoderma lucidum", "20 sobres individuales"],
     precio: "$768",
     precioAntes: "$853",
     bono: "Envío gratis.",
