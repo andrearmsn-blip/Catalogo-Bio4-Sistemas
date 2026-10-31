@@ -53,6 +53,18 @@ export const PRODUCTOS: Producto[] = [
     precioAntes: "$857",
     bono: "Envío gratis.",
   },
+  {
+    slug: "cafe-kenko-de-olla",
+    nombre: "Kenko Café de olla",
+    categoria: "Café",
+    imagen: "/productos/kenko-olla-estudio.jpg",
+    paraQuien: "Para quien disfruta los sabores tradicionales de México y busca una bebida que evoque la calidez del hogar.",
+    beneficio: "Déjate envolver por el aroma y el sabor clásico del café y la canela.",
+    caracteristicas: ["Café, canela y azúcar mascabado", "Ganoderma lucidum", "Para 20 tazas"],
+    precio: "$768",
+    precioAntes: "$853",
+    bono: "Envío gratis.",
+  },
 ];
 
 /** Productos de una categoría, con el destacado primero. */
