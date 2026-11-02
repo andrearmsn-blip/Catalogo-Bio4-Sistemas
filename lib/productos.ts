@@ -18,8 +18,10 @@ export const PRODUCTOS: Producto[] = [
   {
     slug: "cafe-kenko-hogar",
     nombre: "Kenko Café hogar",
+    variante: "hogar",
     categoria: "Café",
-    imagen: "/productos/kenko-hogar-hombre.jpg",
+    imagen: "/productos/kenko-hogar-estudio.jpg",
+    galeria: ["/productos/kenko-hogar-hombre.jpg", "/productos/kenko-hogar-mujer.jpg"],
     paraQuien: "Para quien disfruta tomarlo en casa, aprovechando sus beneficios en cualquier momento del día.",
     beneficio: "Una taza gourmet para tu rutina diaria, más enfoque y menos estrés.",
     caracteristicas: ["Con Ganoderma lucidum", "210 g", "Para 60 tazas"],
@@ -32,8 +34,10 @@ export const PRODUCTOS: Producto[] = [
   {
     slug: "cafe-kenko-sobres",
     nombre: "Kenko Café sobres",
+    variante: "sobres",
     categoria: "Café",
     imagen: "/productos/kenko-sobres-bolso.jpg",
+    galeria: ["/productos/kenko-sobres-oficina.jpg", "/productos/kenko-sobres-reunion.jpg"],
     paraQuien: "Para quienes quieren llevar su café favorito a todas partes.",
     beneficio: "Tus reuniones más productivas en casa, oficina o de viaje.",
     caracteristicas: ["Con Ganoderma lucidum", "25 sobres individuales", "La mejor opción para tu comodidad"],
@@ -44,6 +48,7 @@ export const PRODUCTOS: Producto[] = [
   {
     slug: "cafe-kenko-frasco",
     nombre: "Kenko Café frasco",
+    variante: "frasco",
     categoria: "Café",
     imagen: "/productos/kenko-frasco-estudio.jpg",
     paraQuien: "Para quien busca hacer un regalo especial, elegante y diferente.",
@@ -56,8 +61,10 @@ export const PRODUCTOS: Producto[] = [
   {
     slug: "cafe-kenko-de-olla",
     nombre: "Kenko Café de olla",
+    variante: "de olla",
     categoria: "Café",
     imagen: "/productos/kenko-olla-estudio.jpg",
+    galeria: ["/productos/kenko-olla-hogar.jpg", "/productos/kenko-olla-mesa.jpg"],
     paraQuien: "Para quien disfruta los sabores tradicionales de México y busca una bebida que evoque la calidez del hogar.",
     beneficio: "Déjate envolver por el aroma y el sabor clásico del café y la canela.",
     caracteristicas: ["Café, canela y azúcar mascabado", "Con Ganoderma lucidum", "20 sobres individuales"],

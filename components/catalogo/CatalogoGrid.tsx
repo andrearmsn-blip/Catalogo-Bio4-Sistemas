@@ -2,11 +2,22 @@
 
 import { useState } from "react";
 import { ProductoCard } from "./ProductoCard";
+import { TarjetaInvitacion } from "./TarjetaInvitacion";
 import { CONFIG } from "@/lib/config";
 import { PRODUCTOS } from "@/lib/productos";
 
 /** Cuántos productos se muestran por categoría antes de "ver más" (Iyengar). */
 const TOPE_POR_CATEGORIA = 6;
+
+/**
+ * Cuántas columnas ocupa la tarjeta de invitación para llenar el hueco que
+ * dejan los productos (2 columnas en tablet, 3 en computadora).
+ */
+function columnasInvitacion(productos: number): string {
+  const tablet = productos % 2 === 0 ? "sm:col-span-2" : "sm:col-span-1";
+  const compu = ["lg:col-span-3", "lg:col-span-2", "lg:col-span-1"][productos % 3];
+  return `${tablet} ${compu}`;
+}
 
 interface CatalogoGridProps {
   vendedorSlug?: string | null;
@@ -23,6 +34,10 @@ export function CatalogoGrid({ vendedorSlug }: CatalogoGridProps) {
   );
   const categorias = ["Todas", ...categoriasReales];
   const visibles = filtro === "Todas" ? categoriasReales : [filtro];
+  // La tarjeta de invitación va una sola vez: al final de la última sección visible.
+  const ultimaConProductos = [...visibles]
+    .reverse()
+    .find((c) => PRODUCTOS.some((p) => p.categoria === c));
 
   return (
     <section className="mx-auto max-w-6xl px-5 pb-24">
@@ -68,6 +83,13 @@ export function CatalogoGrid({ vendedorSlug }: CatalogoGridProps) {
                 {mostrados.map((p) => (
                   <ProductoCard key={p.slug} producto={p} vendedorSlug={vendedorSlug} />
                 ))}
+                {cat === ultimaConProductos && CONFIG.invitacion && (
+                  <TarjetaInvitacion
+                    invitacion={CONFIG.invitacion}
+                    vendedorSlug={vendedorSlug}
+                    className={columnasInvitacion(mostrados.length)}
+                  />
+                )}
               </div>
 
               {items.length > TOPE_POR_CATEGORIA && (

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: `${CONFIG.marca.negocio} · Catálogo`,
     description: CONFIG.marca.descripcion,
     type: "website",
-    images: [{ url: "/productos/vela.jpg", width: 1024, height: 1024, alt: CONFIG.marca.negocio }],
+    images: [{ url: "/productos/kenko-hogar-estudio.jpg", width: 1200, height: 1200, alt: CONFIG.marca.negocio }],
   },
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

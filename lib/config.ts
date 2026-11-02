@@ -21,4 +21,34 @@ export const CONFIG: Config = {
   categorias: ["Café"],
   mensajePlantilla:
     "{saludo}vi tu catálogo y me interesa {producto}. ¿Me pueden dar más información y precio?",
+
+  // La tarjeta que invita a más descuento, a la distribución y a compartir.
+  // Cambia aquí los textos. Los botones con "mensaje" abren WhatsApp (con la
+  // vendedora de la liga); el que no lleva mensaje comparte el catálogo.
+  invitacion: {
+    titulo: "Sé parte de Bio4",
+    texto: "Hay más formas de aprovechar Kenko Café, para ti y para quienes te rodean.",
+    acciones: [
+      {
+        icono: "lucide:badge-percent",
+        titulo: "Consigue más descuento",
+        texto: "Pregunta cómo obtener mejores precios en tus compras.",
+        boton: "Quiero más descuento",
+        mensaje: "{saludo}vi tu catálogo y quiero saber cómo conseguir más descuento en mis compras.",
+      },
+      {
+        icono: "lucide:handshake",
+        titulo: "Únete a la distribución",
+        texto: "Conoce cómo distribuir los productos de Bio4.",
+        boton: "Quiero distribuir",
+        mensaje: "{saludo}vi tu catálogo y me interesa unirme a la distribución de Bio4. ¿Me cuentas cómo funciona?",
+      },
+      {
+        icono: "lucide:share-2",
+        titulo: "Compártelo con más gente",
+        texto: "Manda este catálogo a quien le pueda interesar.",
+        boton: "Compartir catálogo",
+      },
+    ],
+  },
 };

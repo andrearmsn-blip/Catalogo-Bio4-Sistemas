@@ -5,6 +5,7 @@ import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
 import { FotoProducto } from "./FotoProducto";
+import { NombreProducto } from "./NombreProducto";
 import { CONFIG } from "@/lib/config";
 import { linkLoQuiero } from "@/lib/whatsapp";
 import type { Producto } from "@/lib/tipos";
@@ -59,7 +60,9 @@ export function ProductoCard({ producto, vendedorSlug }: ProductoCardProps) {
       {/* Cuerpo de la ficha */}
       <div className="flex flex-1 flex-col gap-3 p-5">
         <p className="text-xs font-semibold uppercase tracking-wide text-marca">{producto.categoria}</p>
-        <h3 className="font-display text-2xl leading-tight">{producto.nombre}</h3>
+        <h3 className="font-display text-2xl leading-tight">
+          <NombreProducto producto={producto} />
+        </h3>
 
         {/* Para quién es (el "trabajo" que resuelve) */}
         <p className="text-sm text-ink-soft">

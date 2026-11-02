@@ -3,27 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
+import { compartirLiga } from "@/lib/compartir";
 
 /** Barra bajo el encabezado: compartir el catálogo y descargarlo en PDF. */
 export function BarraAcciones() {
   const [copiado, setCopiado] = useState(false);
 
   async function compartir() {
-    const url = typeof window !== "undefined" ? window.location.href.split("?")[0] : "";
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: document.title, url });
-        return;
-      } catch {
-        /* el usuario canceló: seguimos y copiamos */
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(url);
+    if ((await compartirLiga()) === "copiado") {
       setCopiado(true);
       setTimeout(() => setCopiado(false), 2000);
-    } catch {
-      /* sin portapapeles disponible */
     }
   }
 

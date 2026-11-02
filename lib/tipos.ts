@@ -62,6 +62,16 @@ export interface Producto {
   /** Ruta de la foto en /public (ej. "/productos/vela.jpg"). */
   imagen?: string;
   /**
+   * Fotos extra, después de `imagen`. Orden recomendado: la primera foto es el
+   * producto solo (`imagen`) y las siguientes lo muestran en uso. Se ven en la ficha.
+   */
+  galeria?: string[];
+  /**
+   * La parte final del nombre que va en cursiva (ej. nombre "Kenko Café hogar"
+   * con variante "hogar" se ve: Kenko Café <i>hogar</i>). Debe terminar el nombre.
+   */
+  variante?: string;
+  /**
    * Para quién es y qué "trabajo" le resuelve (Jobs-to-be-done, Christensen).
    * Ej.: "Para el que quiere un regalo que se vea caro sin gastar de más".
    */
@@ -99,4 +109,31 @@ export interface Config {
    * Ej.: "{saludo}me interesa {producto}. ¿Me pueden dar más información?"
    */
   mensajePlantilla: string;
+  /**
+   * Tarjeta especial del catálogo (no es un producto): invita a conseguir más
+   * descuento, unirse a la distribución o compartir. Si no la pones, no aparece.
+   */
+  invitacion?: Invitacion;
+}
+
+/** Una de las invitaciones de la tarjeta especial. */
+export interface AccionInvitacion {
+  /** Ícono (ej. "lucide:badge-percent"). */
+  icono: string;
+  titulo: string;
+  texto: string;
+  /** Texto del botón. */
+  boton: string;
+  /**
+   * Mensaje de WhatsApp ({saludo} se llena solo). Si no lo pones,
+   * el botón comparte la liga del catálogo.
+   */
+  mensaje?: string;
+}
+
+/** La tarjeta especial: un título, una línea y sus invitaciones. */
+export interface Invitacion {
+  titulo: string;
+  texto: string;
+  acciones: AccionInvitacion[];
 }

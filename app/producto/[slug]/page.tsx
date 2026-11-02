@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MessageCircle } from "lucide-react";
 import { Icon } from "@/components/ui/Icon";
-import { FotoProducto } from "@/components/catalogo/FotoProducto";
+import { GaleriaProducto } from "@/components/catalogo/GaleriaProducto";
+import { NombreProducto } from "@/components/catalogo/NombreProducto";
 import { ProductoCard } from "@/components/catalogo/ProductoCard";
 import { CONFIG } from "@/lib/config";
 import { PRODUCTOS, productoPorSlug } from "@/lib/productos";
@@ -36,9 +37,11 @@ export default async function FichaProducto({
       </Link>
 
       <div className="grid gap-8 lg:grid-cols-2">
-        {/* Foto */}
-        <div className="relative">
-          <FotoProducto src={producto.imagen} alt={producto.nombre} className="aspect-square rounded-3xl border border-line" />
+        {/* Fotos: primero el producto solo, luego en uso */}
+        <GaleriaProducto
+          imagenes={[producto.imagen, ...(producto.galeria ?? [])].filter((f): f is string => Boolean(f))}
+          alt={producto.nombre}
+        >
           {producto.escasez && (
             <span className="chip chip-escasez absolute left-4 top-4">
               <Icon
@@ -49,12 +52,14 @@ export default async function FichaProducto({
               {producto.escasez.valor}
             </span>
           )}
-        </div>
+        </GaleriaProducto>
 
         {/* Info */}
         <div className="flex flex-col gap-4">
           <p className="text-sm font-semibold uppercase tracking-wide text-marca">{producto.categoria}</p>
-          <h1 className="font-display text-4xl font-semibold leading-tight sm:text-5xl">{producto.nombre}</h1>
+          <h1 className="font-display text-4xl font-semibold leading-tight sm:text-5xl">
+            <NombreProducto producto={producto} />
+          </h1>
           <p className="text-lg text-ink-soft">
             <span className="font-semibold text-ink">Para</span> {producto.paraQuien.replace(/^para\s+/i, "")}
           </p>

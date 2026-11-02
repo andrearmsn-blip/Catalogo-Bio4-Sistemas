@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
 import { FotoProducto } from "@/components/catalogo/FotoProducto";
+import { NombreProducto } from "@/components/catalogo/NombreProducto";
 import { CONFIG } from "@/lib/config";
 import { PRODUCTOS } from "@/lib/productos";
 
@@ -33,7 +34,9 @@ export default function Imprimir() {
             <FotoProducto src={p.imagen} alt={p.nombre} className="h-28 w-28 shrink-0 rounded-xl" />
             <div className="flex min-w-0 flex-col">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-marca">{p.categoria}</p>
-              <h3 className="font-display text-lg leading-tight">{p.nombre}</h3>
+              <h3 className="font-display text-lg leading-tight">
+                <NombreProducto producto={p} />
+              </h3>
               <p className="mt-1 text-xs text-ink-soft line-clamp-2">{p.beneficio}</p>
               <div className="mt-auto flex items-baseline gap-2 pt-2">
                 {p.precioAntes && <span className="text-xs text-ink-mute line-through">{p.precioAntes}</span>}
