@@ -4,7 +4,7 @@ import { CONFIG } from "@/lib/config";
 import { estiloMarca, claseTema } from "@/lib/marca";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://catalogo-vivo-gilt.vercel.app"),
+  metadataBase: new URL("https://catalogo-bio4-sistemas.vercel.app"),
   title: `${CONFIG.marca.negocio} · Catálogo`,
   description: CONFIG.marca.descripcion,
   openGraph: {
