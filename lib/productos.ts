@@ -51,6 +51,7 @@ export const PRODUCTOS: Producto[] = [
     variante: "frasco",
     categoria: "Café",
     imagen: "/productos/kenko-frasco-estudio.jpg",
+    galeria: ["/productos/kenko-frasco-regalo.jpg"],
     paraQuien: "Para quien busca hacer un regalo especial, elegante y diferente.",
     beneficio: "Regala momentos para disfrutar. Un detalle que se agradece todos los días.",
     caracteristicas: ["Con Ganoderma lucidum", "135 g", "38 tazas"],
