@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
-import { FotoProducto } from "./FotoProducto";
+import { CarruselProducto } from "./CarruselProducto";
 import { NombreProducto } from "./NombreProducto";
 import { CONFIG } from "@/lib/config";
 import { linkLoQuiero } from "@/lib/whatsapp";
@@ -33,15 +33,19 @@ export function ProductoCard({ producto, vendedorSlug }: ProductoCardProps) {
     >
       {/* Foto + etiquetas */}
       <div className="relative">
-        <FotoProducto src={producto.imagen} alt={producto.nombre} className="aspect-square" />
+        <CarruselProducto
+          imagenes={[producto.imagen, ...(producto.galeria ?? [])].filter((f): f is string => Boolean(f))}
+          alt={producto.nombre}
+          className="aspect-square"
+        />
         <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
           {producto.destacado && (
-            <span className="chip chip-destacado no-print">
+            <span className="chip chip-destacado no-print" style={{ background: "rgba(255,255,255,0.94)" }}>
               <Icon name="fluent-emoji-flat:star" size={14} /> El más pedido
             </span>
           )}
           {producto.escasez && (
-            <span className="chip chip-escasez ml-auto no-print">
+            <span className="chip chip-escasez ml-auto no-print" style={{ background: "rgba(255,255,255,0.94)" }}>
               <Icon
                 name={
                   producto.escasez.tipo === "tiempo"
