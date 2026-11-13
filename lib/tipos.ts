@@ -114,6 +114,8 @@ export interface Config {
    * descuento, unirse a la distribución o compartir. Si no la pones, no aparece.
    */
   invitacion?: Invitacion;
+  /** Franja de aviso hasta arriba del catálogo (ej. "¡Buen Fin!"). Déjala vacía para quitarla. */
+  aviso?: string;
 }
 
 /** Una de las invitaciones de la tarjeta especial. */

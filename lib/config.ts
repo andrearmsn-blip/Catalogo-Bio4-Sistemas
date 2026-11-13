@@ -25,6 +25,7 @@ export const CONFIG: Config = {
   // La tarjeta que invita a más descuento, a la distribución y a compartir.
   // Cambia aquí los textos. Los botones con "mensaje" abren WhatsApp (con la
   // vendedora de la liga); el que no lleva mensaje comparte el catálogo.
+  aviso: "¡Buen Fin!",
   invitacion: {
     titulo: "Sé parte de Bio4",
     texto: "Hay más formas de aprovechar Kenko Café, para ti y para quienes te rodean.",
