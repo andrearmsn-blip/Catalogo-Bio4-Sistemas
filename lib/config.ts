@@ -17,6 +17,7 @@ export const CONFIG: Config = {
     { slug: "elizabeth", nombre: "Elizabeth Estrada", whatsapp: "526181334237" },
     { slug: "aranzazu", nombre: "Aranzazú Burgos", whatsapp: "523331577373" },
     { slug: "patricia", nombre: "Patricia Camarena", whatsapp: "523321685819" },
+    { slug: "vero", nombre: "Vero Maldonado", whatsapp: "525560926755" },
   ],
   categorias: ["Café"],
   mensajePlantilla:
