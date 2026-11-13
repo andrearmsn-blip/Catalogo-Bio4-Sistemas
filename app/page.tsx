@@ -18,8 +18,8 @@ export default async function Home({
     <main className="min-h-screen">
       {CONFIG.aviso && (
         <div
-          className="no-print px-5 py-2.5 text-center text-sm font-bold uppercase tracking-[0.18em] text-white sm:text-base"
-          style={{ background: "linear-gradient(90deg, var(--marca-2), color-mix(in srgb, var(--marca-2) 78%, #000))" }}
+          className="no-print px-5 py-5 text-center text-2xl font-extrabold uppercase tracking-[0.2em] text-white sm:py-6 sm:text-4xl"
+          style={{ background: "linear-gradient(90deg, #c8102e, #9d0b22)" }}
         >
           {CONFIG.aviso}
         </div>
